@@ -204,6 +204,7 @@
   }
 }
 
+/* don't nest grids!!!
 .grid2 {
   display: grid;
   grid-template-columns: 1fr;
@@ -214,9 +215,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
-    /* padding-left: 50px; */
+
   }
-}
+} */
 
 /* Pull Q */
 .pullquote {
@@ -234,7 +235,7 @@
 @media (min-width: 425px) {
   .pullquote {
     font-size: 30pt;
-
+    padding-right: 20px;
     /* padding-left: 50px; */
   }
 }
@@ -286,6 +287,7 @@
   margin-left: auto;
   margin-right: auto;
   padding-top: 10px;
+  padding-right: 20px;
 }
 
 @media (min-width: 670px) {
@@ -396,4 +398,34 @@
     line-height: 1.1;
     /* padding-left: 50px; */
   }
+}
+
+/* flex (row1) to fix the browser
+INSTEAD OF NESTING GRIDS */
+
+@media (min-width: 580px) {
+  .box {
+    display: flex;
+  }
+}
+
+.one {
+  flex: 1 1 0;
+}
+
+.two {
+  flex: 1 1 0;
+}
+/* flex (row2) to fix the browser  */
+@media (min-width: 580px) {
+  .box2 {
+    display: flex;
+  }
+}
+.one2 {
+  flex: 1 1 0;
+}
+
+.two2 {
+  flex: 1 1 0;
 }
